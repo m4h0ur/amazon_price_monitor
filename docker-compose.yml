@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  amazon-price-monitor:
+    build: .
+    container_name: amazon-price-monitor
+    environment:
+      - TELEGRAM_BOT_TOKEN=7263540049:Your_Telegram_Token
+      - CHECK_INTERVAL=3600
+    volumes:
+      - ./data:/app/data
+    restart: always
